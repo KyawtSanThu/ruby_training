@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag "app/assets/stylesheets/application.css" %>
+<div>
+<h1>Select Your Age</h1>  
+ <%= form_for :date, url: date_display_path do |f| %>
+  <%= f.date_field [:dob] %>
+  <%= f.submit %>  
+<% end %>
+</div>
