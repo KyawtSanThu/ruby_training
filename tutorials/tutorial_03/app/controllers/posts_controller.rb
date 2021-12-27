@@ -1,9 +1,4 @@
 class PostsController < ApplicationController
-
-
-  def calculate
-  end
-
   def display_age
     date = params[:date][":dob"]
     now = Time.now.utc.to_date
@@ -12,15 +7,15 @@ class PostsController < ApplicationController
     if now.year == dob.year
       if @age < 1 && now.month != dob.month
         @age = (now.month - dob.month).to_i
-        else
+      else
         if now.day > dob.day
           @age = (now.day - dob.day).to_i
         else
           return "Invalid age"
         end
       end
-    put "#{@age} years old"
+      put "#{@age} years old"
     end
-    render 'display'
+    render "display"
   end
 end
