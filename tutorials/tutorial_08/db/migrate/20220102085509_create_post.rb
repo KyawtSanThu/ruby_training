@@ -6,7 +6,8 @@ class CreatePost < ActiveRecord::Migration[5.0]
       t.boolean :public_flag
       t.datetime :created_at
       t.datetime :updated_at
-      t.string :user_name
+      t.integer :user_id
+      t.references :user, null: false, foreign_key: true
     end
   end
 end
