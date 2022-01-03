@@ -1,0 +1,6 @@
+<h3>QR code generator</h3>
+<%= form_tag "/generate/read" do %>
+  <%= label_tag 'ID' %>
+  <%= text_field_tag :content, nil, required: true %>
+  <%= submit_tag 'Save' %>
+<% end %>

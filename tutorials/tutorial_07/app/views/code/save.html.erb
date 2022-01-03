@@ -1,0 +1,6 @@
+<img src ='data:image/png;base64,<%= @result %>'>
+<div>
+  <%= form_tag '/generate/qrcode' do %>
+    <%= submit_tag 'Download' %>
+  <% end %>
+</div>
